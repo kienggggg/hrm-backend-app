@@ -560,5 +560,6 @@ app.delete('/api/candidates/:id', async (req, res) => {
 
 // --- Khởi động máy chủ ---
 app.listen(port, () => {
-  console.log(`Backend API (Thêm CRUD Tuyển dụng) đang chạy tại http://localhost:${port}`);
+  // Log ra cổng thực tế đang sử dụng
+  console.log(`Backend API đang chạy và lắng nghe trên cổng: ${port}`); 
 });

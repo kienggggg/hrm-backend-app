@@ -1,0 +1,41 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Environment variables
+.env
+.env*.local
+
+# Build outputs (nếu có)
+dist/
+build/
+
+# IDE files (ví dụ cho VSCode)
+.vscode/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+
+**Cách thực hiện:**
+
+1.  Mở thư mục `D:\bt_web_nang_cao\hrm-backend` trong File Explorer hoặc VS Code.
+2.  Tìm file `.gitignore`.
+    * Nếu file này **không tồn tại**, hãy tạo một file mới và đặt tên chính xác là `.gitignore` (bao gồm cả dấu chấm ở đầu).
+    * Nếu file này **tồn tại nhưng trống**, hãy mở nó ra.
+3.  **Copy** toàn bộ nội dung trong khối code `eof` ở trên.
+4.  **Dán** nội dung đó vào file `.gitignore` của bạn.
+5.  **Lưu** file `.gitignore` lại.
+
+**Tại sao `.gitignore` quan trọng?**
+File này nói cho Git biết những file và thư mục nào cần **bỏ qua**, không đưa vào kho lưu trữ. Quan trọng nhất là `node_modules/`, vì thư mục này chứa hàng ngàn file thư viện có thể dễ dàng cài lại bằng lệnh `npm install` và không nên lưu trữ trên GitHub.
+
+**Sau khi sửa `.gitignore`:**
+Bây giờ, bạn có thể yên tâm thực hiện lại các bước dọn dẹp kho `hrm-backend-app` trên GitHub (chạy `git rm -r --cached hrm-frontend`, `git commit`, `git push --force`) như hướng dẫn trước. Lần này, Git sẽ bỏ qua `node_modules` một cách chính xác.
